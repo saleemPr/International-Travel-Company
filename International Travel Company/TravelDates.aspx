@@ -106,7 +106,7 @@
                             <asp:Label runat="server" AssociatedControlID="Currency_ISO" CssClass="control-label">Currency ISO Code</asp:Label>
                                 <asp:TextBox runat="server" ID="Currency_ISO" CssClass="form-control" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Currency_ISO"
-                                    CssClass="text-danger" ErrorMessage="The Currency ISO Code field is required." />
+                                    CssClass="text-danger" ErrorMessage="required." />
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="Currency_ISO" ErrorMessage="It's Not ISO Code" ValidationExpression="[A-Z]{3}\b" 
                                 CssClass="text-danger"></asp:RegularExpressionValidator>
                         </div>  
@@ -114,13 +114,13 @@
                             <asp:Label runat="server" AssociatedControlID="Travel_time" CssClass="control-label">Travel timestamp</asp:Label>
                                 <asp:TextBox runat="server" ID="Travel_time" TextMode="DateTime" CssClass="form-control" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Travel_time"
-                                    CssClass="text-danger" ErrorMessage="The Travel timestamp field is required." />
+                                    CssClass="text-danger" ErrorMessage="required." />
                         </div>  
                         <div class="form-group">  
                             <asp:Label runat="server" AssociatedControlID="prices" CssClass="control-label">Travel Price Amount</asp:Label>
                                 <asp:TextBox runat="server" ID="prices" CssClass="form-control" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="prices"
-                                    CssClass="text-danger" Display="Dynamic" ErrorMessage="The Price Amount field is required." />
+                                    CssClass="text-danger" Display="Dynamic" ErrorMessage="required." />
                         </div>
                 </div>
                 <div class="modal-footer">
