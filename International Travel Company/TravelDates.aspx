@@ -8,15 +8,15 @@
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <script type="text/javascript">
         $(document).ready(function () {
-            showdata();
-        });
+            showdata();                     
+        });                    
             function showdata() {
             $.ajax({
                 url: "api/TTravel",
                 type: "GET",
                 dataType: "Json",
                 success: function (data) {
-                    $('#tblStudent tbody').empty();
+                    $('#tbl tbody').empty();
                     $("#<%=Currency_ISO.ClientID %>").val(""),
                     $("#<%=Travel_time.ClientID %>").val(""),
                     $("#<%=prices.ClientID %>").val("")
@@ -35,7 +35,7 @@
                                 + "<td class='prtoducttd'>" + item.Travel_timestamp + "</td>"
                                 + "<td class='prtoducttd'>" + item.Travel_Price_Amount_in_payment_currency + '</td>'
                                 + html + '</td>' + "</tr>";
-                            $('#tblStudent tbody').append(rows);
+                            $('#tbl tbody').append(rows);
                         });
                         
                 }
@@ -83,7 +83,7 @@
     <h1>Travel Dates</h1>
     <hr />
     <div id="exist" style="text-align:center;padding-bottom:10px;font-size:medium" class="text-danger" runat="server" visible="false">Already exist</div>
-    <table id="tblStudent" class="table table-bordered table-striped table-responsive table-hover">  
+    <table id="tbl" class="table table-bordered table-striped table-responsive table-hover">  
         <thead>  
             <tr>  
                 <th id="Click" align="left" class="productth">Currency ISO Code</th>  
@@ -124,7 +124,6 @@
                         </div>
                 </div>
                 <div class="modal-footer">
-<%--                    <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Edite();" data-dismiss="modal">Edit</button>--%>
                     <asp:HiddenField ID="HiddenField1" runat="server" />
                     <asp:Button runat="server" Text="Save Travel" CssClass="btn btn-default" OnClick="Edite_Click" />
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>  

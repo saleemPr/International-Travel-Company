@@ -1,6 +1,7 @@
 ﻿using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -26,11 +27,8 @@ namespace International_Travel_Company
         // POST api/<controller>
         public void Post(Travel_table travel)
         {
-            
-                db.Travel_tables.Add(travel);
-                db.SaveChanges();
-            
-            
+             db.Travel_tables.Add(travel);
+             db.SaveChanges();
         }
         public void Post(int id)
         {
@@ -46,6 +44,7 @@ namespace International_Travel_Company
             Change.Currency_ISO_Code = travel.Currency_ISO_Code;
             Change.Travel_timestamp = travel.Travel_timestamp;
             Change.Travel_Price_Amount_in_payment_currency = travel.Travel_Price_Amount_in_payment_currency;
+
             db.SaveChanges();
         }
 
