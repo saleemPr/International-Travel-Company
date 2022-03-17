@@ -19,8 +19,8 @@ namespace International_Travel_Company
             var check = db.Travel_tables.SingleOrDefault(i=>i.Currency_ISO_Code == Currency_ISO.Text);
             if (check == null)
             {
+                Added.Visible = true;
                 ClientScript.RegisterStartupScript(GetType(), "OnLoad", "Add();", true);
-                Response.Redirect("TravelDates.aspx");
             }
             else
             {

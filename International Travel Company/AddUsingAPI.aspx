@@ -28,6 +28,7 @@
     <div>
         <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="text-danger" ValidationGroup="done" />
     </div>
+     <div id="Added" style="padding-left:25%;padding-bottom:10px;font-size:medium" class="text-success" runat="server" visible="false">Added</div>
     <div id="exist" style="padding-left:25%;padding-bottom:10px;font-size:medium" class="text-danger" runat="server" visible="false">Already exist</div>
     <div class="form-horizontal">
         <div class="form-group">
